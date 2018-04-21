@@ -2,7 +2,7 @@ const {app} = require('../../../src/main/js/add_via_http');
 const request = require('supertest');
 const assert = require('assert');
 
-describe.only("test GET /add/:a/:b",() => {
+describe("test GET /add/:a/:b",() => {
     it("can add 02 numbers",(done) => {
         request(app).get('/add/1/2')
         .then(response => {
